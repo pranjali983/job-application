@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Application | Your Name</title>
+    <style>
+        :root {
+            --primary: #2d3436;
+            --accent: #0984e3;
+            --light-bg: #f5f6fa;
+            --text-muted: #636e72;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--primary);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Resume Paper Container */
+        .resume {
+            background: white;
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            min-height: 1100px;
+        }
+
+        /* Left Column (Sidebar) */
+        .sidebar {
+            width: 35%;
+            background: var(--primary);
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+            color: var(--accent);
+        }
+
+        .contact-info, .skills-list {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .contact-info li, .skills-list li {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Right Column (Main Content) */
+        .main-content {
+            width: 65%;
+            padding: 50px;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            color: var(--accent);
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--light-bg);
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+
+        .job-item {
+            margin-bottom: 20px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+
+        .job-company { color: var(--accent); }
+        
+        .job-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        /* Print optimization */
+        @media print {
+            body { padding: 0; background: white; }
+            .resume { box-shadow: none; width: 100%; }
+        }
+
+        @media (max-width: 768px) {
+            .resume { flex-direction: column; }
+            .sidebar, .main-content { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume">
+        <aside class="sidebar">
+            <h2>Contact</h2>
+            <ul class="contact-info">
+                <li>📍 Maharashtra, India</li>
+                <li>📞 +91 98XXX XXXXX</li>
+                <li>✉️ email@example.com</li>
+                <li>🔗 linkedin.com/in/username</li>
+            </ul>
+
+            <h2>Top Skills</h2>
+            <ul class="skills-list">
+                <li>✓ Frontend Development</li>
+                <li>✓ UI/UX Graphic Design</li>
+                <li>✓ Project Management</li>
+                <li>✓ HTML5 / CSS3 / JS</li>
+                <li>✓ Python & Data Analysis</li>
+            </ul>
+
+            <h2>Languages</h2>
+            <ul class="skills-list">
+                <li>English (Professional)</li>
+                <li>Hindi (Native)</li>
+                <li>Marathi (Native)</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Your Name</h1>
+                <p>Full Stack Developer</p>
+            </header>
+
+            <section class="section">
+                <h2 class="section-title">Summary</h2>
+                <p class="job-desc">
+                    Highly motivated professional with 3+ years of experience in building modern web applications. 
+                    Proven track record of delivering high-quality code and improving user engagement through clean design.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="job-item">
+                    <div class="job-header">
+                        <span>Senior Web Developer</span>
+                        <span>2024 - Present</span>
+                    </div>
+                    <div class="job-company">TechSolutions Pvt Ltd</div>
+                    <p class="job-desc">Led a team of 5 developers to rebuild the core company platform, resulting in a 40% increase in page load speed.</p>
+                </div>
+
+                <div class="job-item">
+                    <div class="job-header">
+                        <span>Junior UI Designer</span>
+                        <span>2022 - 2024</span>
+                    </div>
+                    <div class="job-company">Creative Digital Agency</div>
+                    <p class="job-desc">Designed and prototyped mobile-first websites for over 20 international clients.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="job-item">
+                    <div class="job-header">
+                        <span>Bachelor of Computer Science</span>
+                        <span>Graduated 2022</span>
+                    </div>
+                    <div class="job-company">University of Mumbai</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
